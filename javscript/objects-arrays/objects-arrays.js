@@ -121,3 +121,36 @@ objectforshallow2.notebookdimension.width = 1300000;
 console.log(objectforshallow1); // change reflect here also
 console.log(objectforshallow2); //change reflect here aslo
 //.............to overcome this limitations of shallow copy we do DEEEEEEEEEEEEEEPPPPPPPPPPPPPP COPYYYYYY
+
+/* for deep copying we have to do is that 
+first convert our object into string and 
+then  copy that into our new object
+ as our new object is having a object data that is converted to string
+ and then to object again 
+ this will create the copy of nested obojectslso*/
+
+// Original object with nested objects
+const original = {
+  name: "Rahul",
+  info: {
+    age: 25,
+    address: {
+      city: "Delhi",
+      pin: 110001,
+    },
+  },
+  hobbies: ["coding", "gaming"],
+};
+
+// Deep copy using JSON.stringify and JSON.parse
+const deepCopy = JSON.parse(JSON.stringify(original));
+
+// Let's modify the deep copy
+deepCopy.name = "Mishra";
+deepCopy.info.age = 30;
+deepCopy.info.address.city = "Mumbai";
+deepCopy.hobbies[0] = "reading";
+
+// Print both objects to see the difference
+console.log("Original Object:", original);
+console.log("Deep Copy:", deepCopy);
