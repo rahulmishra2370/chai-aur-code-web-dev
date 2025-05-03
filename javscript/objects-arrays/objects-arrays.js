@@ -78,3 +78,46 @@ console.log(p2);
 // in the case of string when we cpoy sometrhing in a new variable and if its value is change (new one ) there is no change in the origianl string
 
 // when i did samething with the object while copying and editing the new obj its changes also reflect in the org obj whyyyyy???????
+
+// answer .md file mei hai iski
+
+let obj1 = {
+  car1: "gurkha",
+  car2: "thar",
+};
+
+let obj2 = {
+  ...obj1,
+};
+console.log(obj2);
+// now modifiying the value of obj2 but it will not affect the values of obj1
+obj2.car1 = "maruti";
+console.log(obj2); // change reflect here only
+console.log(obj1); // no change in this
+
+// this is called SHALLOW copy if there is a nested object here it will still change in both original and copied object see here
+
+let objectforshallow1 = {
+  copy: "classmate",
+  notebook: "red",
+  notebookdimension: {
+    height: 100,
+    width: 100,
+  },
+};
+
+let objectforshallow2 = {
+  ...objectforshallow1,
+};
+
+console.log(objectforshallow2);
+console.log(objectforshallow1);
+// here i will change the value of nested object notebook dimension it will relfect in both
+
+objectforshallow2.notebookdimension.height = 120000;
+objectforshallow2.notebookdimension.width = 1300000;
+
+// now printing this again
+console.log(objectforshallow1); // change reflect here also
+console.log(objectforshallow2); //change reflect here aslo
+//.............to overcome this limitations of shallow copy we do DEEEEEEEEEEEEEEPPPPPPPPPPPPPP COPYYYYYY
