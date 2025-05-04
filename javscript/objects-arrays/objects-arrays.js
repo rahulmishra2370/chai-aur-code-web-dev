@@ -79,7 +79,8 @@ mapwithentries.clear();
 const numberofentries = mapwithentries.size;
 //
 
-// filter
+// .................................       filter   ...............................................
+
 // reduce
 // sort
 // use a for loop in the array of your choice and then find out which element of your array has the max number of characters
