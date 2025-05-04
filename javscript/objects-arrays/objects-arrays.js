@@ -2,10 +2,10 @@ console.log("hey0");
 // Arrays
 const color = ["red", "pink", "green", "purple"];
 const index = color.indexOf("purple");
-console.log(index);
-if (index > -1) {
-  let arr = color.splice(index, 1);
-}
+// console.log(index);
+// if (index > -1) {
+//   let arr = color.splice(index, 1);
+// }
 // .................................................splice..................................................
 
 /*splice method ek versatile tool hai JavaScript mein jo array manipulation ko bhot easy bana deta hai. 
@@ -18,19 +18,67 @@ aur yeh in-place kaam karta hai,
 
 const fruits = ["apple", "banana", "cherry"];
 const removedfruits = fruits.splice(1, 2);
-console.log(removedfruits);
-console.log(fruits);
+// console.log(removedfruits);
+// console.log(fruits);
 
 const colors = ["red", "yellow", "green"];
 const addingcolors = colors.splice(2, 0, "orange", "purple", "pink");
-console.log(addingcolors); // this will return empty array as nothig is removed from here but will orginal array as we are adding na
-console.log(colors);
+// console.log(addingcolors); // this will return empty array as nothig is removed from here but will orginal array as we are adding na
+// console.log(colors);
 
 const tea = ["balck", "green", "white"];
 const replacetea = tea.splice(0, 1, "pink-tea", "herbal-tea", "red-tea");
-console.log(replacetea); //["black"]
-console.log(tea);
-//map
+// console.log(replacetea); //["black"]
+// console.log(tea);
+
+//........................................    MAP     ...................................................
+
+/*
+  Map ek awesome data structure hai JavaScript mein jo tujhe flexible key-value storage deta hai, 
+  with better features than plain objects. 
+  Tu isse non-string keys, easy iteration, 
+  aur size tracking ke liye use kar sakta hai.
+   Methods jaise set, get, has, 
+   aur delete ka use karke tu apne data ko efficiently manage kar sakta hai
+
+*/
+// empty map
+let mymap = new Map();
+
+//  map with entries
+// Map([
+// [],
+// // [],
+// []
+// ]);
+
+let mapwithentries = new Map([
+  ["name", "rahul"],
+  ["surname", "mishra"],
+  [1, "one"],
+  [true, "boolean key"],
+]);
+// size of the map
+// console.log(mapwithentries.size);
+
+mapwithentries.set("name", "shubham");
+mapwithentries.set("gender", "male");
+// console.log(mapwithentries);
+
+const getkey = mapwithentries.get(1);
+// console.log(getkey);
+
+// console.log(mapwithentries.has("gender"));
+
+mapwithentries.delete("gender");
+// console.log(mapwithentries);
+
+// console.log(mapwithentries.size);
+mapwithentries.clear();
+// console.log(mapwithentries);
+const numberofentries = mapwithentries.size;
+//
+
 // filter
 // reduce
 // sort
@@ -57,7 +105,7 @@ const obj = {
     pin: 140603,
   },
 };
-console.log(obj.getfullname(), obj.address, obj.hobbies);
+// console.log(obj.getfullname(), obj.address, obj.hobbies);
 
 // if we want to create a real world obj in the coding world we can do it by creating that thing into the object form
 // for example if we want to create a remote of tv in the coding world we can do it as follow
@@ -79,24 +127,24 @@ const remote = {
 
 let firstname = "rahul";
 let newname = firstname;
-console.log(firstname);
-console.log(newname);
+// console.log(firstname);
+// console.log(newname);
 newname = "mishra";
-console.log("again printing");
-console.log(firstname);
-console.log(newname);
+// console.log("again printing");
+// console.log(firstname);
+// console.log(newname);
 
 const p1 = {
   name: "rahul",
 };
 const p2 = p1;
-console.log("before any modification/copying");
-console.log(p1);
-console.log(p2);
+// console.log("before any modification/copying");
+// console.log(p1);
+// console.log(p2);
 p2.name = "mishra hai ab ";
-console.log("now printting both after edititng in the p2");
-console.log(p1);
-console.log(p2);
+// console.log("now printting both after edititng in the p2");
+// console.log(p1);
+// console.log(p2);
 
 // in the case of string when we cpoy sometrhing in a new variable and if its value is change (new one ) there is no change in the origianl string
 
@@ -112,11 +160,11 @@ let obj1 = {
 let obj2 = {
   ...obj1,
 };
-console.log(obj2);
+// console.log(obj2);
 // now modifiying the value of obj2 but it will not affect the values of obj1
 obj2.car1 = "maruti";
-console.log(obj2); // change reflect here only
-console.log(obj1); // no change in this
+// console.log(obj2); // change reflect here only
+// console.log(obj1); // no change in this
 
 // this is called SHALLOW copy if there is a nested object here it will still change in both original and copied object see here
 
@@ -133,16 +181,16 @@ let objectforshallow2 = {
   ...objectforshallow1,
 };
 
-console.log(objectforshallow2);
-console.log(objectforshallow1);
+// console.log(objectforshallow2);
+// console.log(objectforshallow1);
 // here i will change the value of nested object notebook dimension it will relfect in both
 
 objectforshallow2.notebookdimension.height = 120000;
 objectforshallow2.notebookdimension.width = 1300000;
 
 // now printing this again
-console.log(objectforshallow1); // change reflect here also
-console.log(objectforshallow2); //change reflect here aslo
+// console.log(objectforshallow1); // change reflect here also
+// console.log(objectforshallow2); //change reflect here aslo
 //.............to overcome this limitations of shallow copy we do DEEEEEEEEEEEEEEPPPPPPPPPPPPPP COPYYYYYY
 
 /* for deep copying we have to do is that 
@@ -175,5 +223,5 @@ deepCopy.info.address.city = "Mumbai";
 deepCopy.hobbies[0] = "reading";
 
 // Print both objects to see the difference
-console.log("Original Object:", original);
-console.log("Deep Copy:", deepCopy);
+// console.log("Original Object:", original);
+// console.log("Deep Copy:", deepCopy);
