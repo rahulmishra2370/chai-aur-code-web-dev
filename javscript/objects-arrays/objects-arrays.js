@@ -6,7 +6,30 @@ console.log(index);
 if (index > -1) {
   let arr = color.splice(index, 1);
 }
-// splice
+// .................................................splice..................................................
+
+/*splice method ek versatile tool hai JavaScript mein jo array manipulation ko bhot easy bana deta hai. 
+Tu isse elements remove, add, ya replace karne ke liye use kar sakta hai, 
+aur yeh in-place kaam karta hai,
+ jo efficient hai jab tu original array ko modify karna chahta hai. 
+ Bas dhyan rakh ki yeh original array ko change karta hai, 
+ aur performance ke liye large arrays pe carefully use karna chahiye
+ */
+
+const fruits = ["apple", "banana", "cherry"];
+const removedfruits = fruits.splice(1, 2);
+console.log(removedfruits);
+console.log(fruits);
+
+const colors = ["red", "yellow", "green"];
+const addingcolors = colors.splice(2, 0, "orange", "purple", "pink");
+console.log(addingcolors); // this will return empty array as nothig is removed from here but will orginal array as we are adding na
+console.log(colors);
+
+const tea = ["balck", "green", "white"];
+const replacetea = tea.splice(0, 1, "pink-tea", "herbal-tea", "red-tea");
+console.log(replacetea); //["black"]
+console.log(tea);
 //map
 // filter
 // reduce
