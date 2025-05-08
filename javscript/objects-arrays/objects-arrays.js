@@ -98,6 +98,21 @@ let startsWithA = names.filter((name) => name.startsWith("A"));
 
 console.log("Filtered array:", startsWithA); // ["Ankit", "Aman", "Ashok"]
 console.log("Original array:", names); // ["Ankit", "Rahul", "Aman", "Priya", "Ashok"]
+
+let students = [
+  { name: "Rahul", marks: 85 },
+  { name: "Ankit", marks: 75 },
+  { name: "Aman", marks: 90 },
+  { name: "Priya", marks: 60 },
+];
+
+// Filter students with marks > 80
+let highScorers = students.filter((student) => student.marks > 80);
+
+console.log("Filtered array:", highScorers);
+// [{ name: "Rahul", marks: 85 }, { name: "Aman", marks: 90 }]
+console.log("Original array:", students);
+// [{ name: "Rahul", marks: 85 }, { name: "Ankit", marks: 75 }, ...]
 // reduce
 // sort
 // use a for loop in the array of your choice and then find out which element of your array has the max number of characters
