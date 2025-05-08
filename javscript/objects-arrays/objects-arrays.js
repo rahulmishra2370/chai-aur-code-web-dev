@@ -113,6 +113,13 @@ console.log("Filtered array:", highScorers);
 // [{ name: "Rahul", marks: 85 }, { name: "Aman", marks: 90 }]
 console.log("Original array:", students);
 // [{ name: "Rahul", marks: 85 }, { name: "Ankit", marks: 75 }, ...]
+
+let numbers1 = [10, 20, 30, 40, 50];
+
+// Filter elements at even indices
+let evenIndices = numbers1.filter((num, index) => index % 2 === 0);
+
+console.log("Filtered array:", evenIndices); // [10, 30, 50]
 // reduce
 // sort
 // use a for loop in the array of your choice and then find out which element of your array has the max number of characters
