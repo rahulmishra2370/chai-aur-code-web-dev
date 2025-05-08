@@ -83,6 +83,21 @@ const numberofentries = mapwithentries.size;
 const filter = console.log("filter start kar bhai ");
 console.log(first);
 console.log(first);
+let numbers = [1, 6, 3, 8, 4, 9];
+
+// Filter numbers greater than 5
+let greaterThan5 = numbers.filter((num) => num > 5);
+
+console.log("Filtered array:", greaterThan5); // [6, 8, 9]
+console.log("Original array:", numbers); // [1, 6, 3, 8, 4, 9]
+
+let names = ["Ankit", "Rahul", "Aman", "Priya", "Ashok"];
+
+// Filter names starting with 'A'
+let startsWithA = names.filter((name) => name.startsWith("A"));
+
+console.log("Filtered array:", startsWithA); // ["Ankit", "Aman", "Ashok"]
+console.log("Original array:", names); // ["Ankit", "Rahul", "Aman", "Priya", "Ashok"]
 // reduce
 // sort
 // use a for loop in the array of your choice and then find out which element of your array has the max number of characters
