@@ -124,7 +124,7 @@ console.log("Filtered array:", evenIndices); // [10, 30, 50]
 let numbers2 = [1, 2, 3, 4];
 
 // Filter numbers greater than 10
-let greaterThan10 = numbers2.filter((num) => num > 10);
+let greaterThan10 = numbers2.filter((num) => num > 10); // how's the josh
 
 console.log("Filtered array:", greaterThan10); // []
 // reduce
