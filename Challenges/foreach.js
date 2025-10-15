@@ -1,3 +1,5 @@
+const { obj } = require("./de-structing-of-objects");
+
 let numbers = [1, 2, 3, 4, 5];
 numbers.forEach((numbers) => console.log(numbers + 1));
 
@@ -29,3 +31,4 @@ function user() {
 let [naam, surname, sports] = user();
 
 console.log(naam);
+export let { fname, sname, age } = obj;
